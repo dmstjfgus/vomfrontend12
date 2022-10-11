@@ -14,25 +14,30 @@
 header{
     width: 100%;
     height: auto;
-    padding: 30px 0;
+    padding: 0 20px;
     font-size: 20px;
     font-weight: bold;
     border: 1px solid skyblue;
     text-align: center;
+    display: flex;
+    justify-content: flex-end;
 }
 
 main{
     width: 100%;
     height: auto;
     display: flex;
+    margin: 5px 0;
+    gap: 5px;
 }
 
 nav, section, aside{
     border: 1px solid skyblue;
     text-align: center;
-    padding: 100px 0;
+    padding: 100px 5px 5px 5px;
     font-size: 20px;
     font-weight: bold;
+
 }
 
 nav{
@@ -41,8 +46,69 @@ nav{
 
 section{
     width: 60%;
+    margin: 0 5px;
+}
+
+article{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid skyblue;
+    text-align: center;
+}
+
+article:nth-child(2){
+    margin-bottom: 5px;
 }
 
 aside{
     width: 20%;
 }
+
+footer{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid skyblue;
+    text-align: center;
+}
+
+/* Navigation Style */
+.navi{
+    display: flex;
+    list-style: none;
+    /* gap: 10px; */
+}
+
+.navi a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 25px 30px;
+    display: block;
+    transition: all 0.4s;
+}
+
+.navi li.active a,
+.navi li:hover a{
+    color: #fff;
+    background: skyblue;
+}
+
+
+/* .navi li:hover a{
+    color: #fff;
+    background: skyblue;
+} */
+
+/* 태그안에 또 다른 태그가 들어가 있을 경우 자식태그 제일 안에 있는 기준 가장 밖에 있는 족보와 같은 내용 후손을 선택할때
+띄어쓰기 사용, > 이건 직계일 경우 
+navi안에 여러개 a 가 같이 들어간 경우 직계로 같이 들어간다
+띄어쓰기는 안에 들어가 있는 모든 걸 사용
+직접선택, class를 .으로 바로 넣는 경우 ex) .navi
+hover을 많이 사용 마우스를 호버 했을 때 (마우스가 위에 머무르고 있을때)
+/* 위에 내용이 같은 경우 같이 넣어서 사용이 가능하다 */
