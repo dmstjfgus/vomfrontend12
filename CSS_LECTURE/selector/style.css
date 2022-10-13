@@ -5,7 +5,7 @@
 /* selector{property: property-value;} */
 
 /* selector-대상
-property-특성, 속성 / 필수적이거나 특별하다는 의미
+property-특성 / 필수적이거나 특별하다는 의미
 position- 요소를 배치하는 방법을 지정 */
 
 /************* selector ***************/
@@ -42,6 +42,5 @@ div li:first-child{color: red;} /* 39번의 다른 방법 */
 div li:last-child{color: green;} /* 가장 처음과 마지막만 가능한 방법 */
 
 /* 9. 의제선택자 */
-/* before, after를 사용할 때 content 속성의 값은 필수이다. 빈 공간을 나타내고 싶다면 ''를 사용한다 */
 h1::before{content:'['}
 h1::after{content:']'}
