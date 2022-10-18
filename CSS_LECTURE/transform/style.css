@@ -1,0 +1,84 @@
+/*
+- transform(변환)은 요소에 특정 변형 효과를 지정한다. 일반적으로 2d 변형은 4가지가 쓰인다. 변환 속성은 주변 요소에 영향을 주지 않는다.
+1. translate : 요소의 위치를 이동 시킨다. x,y 좌표를 각각 지정할 수 있고, 좌표 없이 (npx, ypx) 방식으로 함께 지정할 수도 있다.
+2. scale : 요소의 크기를 변화 시킨다. x,y 좌표를 각각 지정할 수 있고, 좌표 없이 (npx, ypx) 방식으로 함께 지정할 수도 있다.
+3. skew : 요소를 특정 각도로 비튼다. x,y 좌표를 각각 지정할 수 있고, 좌표 없이 (npx, ypx) 방식으로 함께 지정할 수도 있다.
+skewX는 x축을 고정시키고 세로를 비틀고, skewy는 y축을 고정시키고 가로를 비튼다고 이해하면 된다.
+4. rotate : 요소의 특정 각도를 돌린린다.
+x, y축을 지정하면 해당 축을 기준으로 돌리게 되고, 둘 모두를 축약으로 지정하게 되면 중앙축이 적용되어 돌린다.
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+div.outer{
+    width: 200px;
+    height: 200px;
+    border: 1px solid;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.inner{
+    width: 100px;
+    height: 100px;
+    background: skyblue;
+    _margin: 50px auto;
+    _padding: 50px;
+}
+
+div.outer1 > div.inner{
+    transform:translateX(50px);
+    transition: all 0.4s ease;
+    /* _transform:translateY(50px)
+    _transform:translate(50px, 50px) */
+    /* X는 가로 Y는 세로로 이동 둘다하고 싶으면 안적고 숫자 둘다 적기. */
+}
+
+div.outer1:hover > div.inner{
+    transform:translateX(-50px);
+}
+
+div.outer2 > div.inner{
+    _transform: scaleX(1.5);
+    _transform:scaleY(2);
+    _transform: scale(1.5, 2);
+    transition: all 0.4s  ease;
+}
+
+div.outer2:hover > div.inner{
+    transform: scale(1.2)
+}
+
+/* 
+div.outer2를 호버했을때 div.intter의 스케일이 1.2배 커진다. 커지는 시간은 0.4초. 
+*/
+
+div.outer3 > div.inner{
+    _transition: all 0.4s ease;
+    transform:skewX(40deg);
+    _transform: skewY(30deg);
+    _transform: skew(40deg, 30deg);
+}
+
+div.outer3:hover > div.inner{
+    _transform:translateX(-50px);
+    transform: skew(0deg);
+    transform: all 0.4s ease;
+}
+
+div.outer4:hover > div.inner{
+    _transform:rotateX(40deg);
+    _transform:rotateY(50deg);
+    transform:rotate(120deg);
+    transition: all 0.4s ease;
+}
+
+div.outer4:hover > div.inner{
+    _transform:translateX(-50px);
+}
