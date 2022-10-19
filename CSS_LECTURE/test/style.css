@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1250px;
+    height: auto;
+    gap: 1.25rem;
+    background: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin:auto;
+    padding:1.25rem;
+}
+
+.container > .item{
+    width: calc(33.33% - 1.25rem);  
+    _height: 300px;
+    _color: white;
+    border: 1px solid;
+    text-align: center;
+    overflow: hidden;
+}
+
+.img{
+    width: 100%;
+    height: 250px;
+    border: 1px solid white;
+}
+
+.p{
+    width: 100%;
+    height: 50px;
+    border: 1px solid white;
+}

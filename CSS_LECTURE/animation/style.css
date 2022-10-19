@@ -1,3 +1,13 @@
+/*
+   1. animation-name : 애니메이션 keyframes와 연결할 이름
+   2. animation-delay : 애미메이션 실행을 특정 시간동안 지연시켜준다.
+   2. animation-fii-mode : 애니메이션 실 후 속성이 지속되게 한다(forwards 적용 시)
+   4. animation-iteration-count : 애니메이션 실행 횟수 지정
+   5. animation-direction : 애니메이션 변화 후 변화 이전으로 자동 계산하여 실행(alternate 적용 시)
+   5. animation-direction : 애니메이션 변화 후 변화 이전으로 자동 계산하여 실행(alrternate 적용 시)
+   6. animation-duration : 애니메이션 지속 시간 지정
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -55,6 +65,18 @@ i.fa-solid{
     opacity: 0.6;
     /* opacity는 투명도이며, 값이 0에 가까울 수록 투명도는 높아진다. */
     animation: scale 0.5s infinite alternate;
+}
+
+@keyframes scale {
+    0%{
+        font-size: 30px;
+        color: #fff;
+        opacity: 0.6s;
+    }
+    100%{
+       font-size: 50px;
+       opacity: 1;
+    }
 }
 
 /* 
