@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrap{
+    width: 100%;
+    height: auto; /* 원래 그냥 auto */
+    overflow: hidden; /* 밖으로 넘어가는걸 방지 그냥 잘라버림 */
+}
+
+.container{
+    width: 100%;
+    max-width:1024px;
+    _background: #dfdfdf;
+    display: flex; /* 가로로 가기 위해서 */
+    flex-wrap: wrap; /* 옆에 막히면 밑으로 떨어지게 만드는 것 */
+    margin: auto; /* 화면 중앙으로 */
+}
+
+.item{
+    width: 33.33%;
+    height: 250px;
+    _border: 1px solid;
+    padding: 0.8rem; /* 부모에 패딩을 넣으면 자식이 안으로 밀려나감 */
+}
+
+.item>div{
+    width: 100%;
+    height: 100%;
+    background: #555;
+}
+
+@media screen and (max-width:700px) {
+    .item{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .item{
+        width: 100%;
+    }
+}
+
+/* max-width만 적을때 순서를 꼭 기억해서 넣어야함 */
