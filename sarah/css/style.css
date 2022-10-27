@@ -39,9 +39,6 @@ img {
   z-index: 1;
 }
 
-.snslogo {
-}
-
 .img-container {
   width: 100%;
   height: 100%;
@@ -65,4 +62,163 @@ section {
 
 section > img {
   width: 100%;
+}
+
+.snslogo {
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+}
+
+/* .sns{
+  position: relative;
+  right: 20px;
+  top: 60px;
+  display: flex;
+}
+
+.sns a{
+  font-size: 1.5rem;
+  margin-right: 10px;
+} */
+
+h1 {
+  /* position: absolute;
+  font-size: 10px;
+  left: -500px; */
+  text-indent: -500px;
+}
+
+h1 > .logoimg {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  margin-left: -200px;
+  width: 400px;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  _background: black;
+  z-index: 100;
+  _opacity: 0.5;
+  background: url(../img/tr.png);
+}
+
+ul.navi-list {
+  _position: absolute;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  _float: left;
+  display: flex;
+}
+
+.navi-list > li {
+  text-align: center;
+  width: 16.66%;
+  position: relative;
+  perspective: 700px;
+}
+
+.navi-container > .navi-list > li > a {
+  line-height: 4;
+  font-family: orbitron;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  /* lowercase : 소문자 capotalizze : 단어의 첫 글자만 대문자 */
+  transition: all 0.4s ease;
+}
+
+.navi-list > li:hover > a {
+  transform: translateY(-20px);
+  /* transform 속성은 inline 태그에는 적용 안됨 */
+  opacity: 0;
+}
+
+/* 2 depth */
+
+.navi-list > li > div {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  width: 100%;
+  height: 300px;
+  background: url(../img/tr.png);
+  border: 1px solid #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  padding: 10px;
+}
+
+.navi-list > li:hover > div {
+  opacity: 1;
+  top: -100px;
+  visibility: visible;
+  /* opacity가 0인 경우에도 요소는 존재한다. 따라서 마우스 호버 등의 영향을 받는다. 하지만 visivility를 hidden으로 하면 요소 자체가 없어지는 효과가 난다. */
+  transform: rotateY(360deg);
+}
+
+.navi-list > li > div > p {
+  width: 100%;
+  height: 90px;
+  border: 1px solid #333;
+  overflow: hidden;
+}
+
+.navi-list > li > div > img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.navi-list > li > div > h2 {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  _text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: orbitron;
+  color: #fff;
+  height: 50px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navi-list > li > div > ul {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navi-list > li > div > ul > li {
+  width: 100%;
+  height: 37px;
+}
+
+.navi-list > li > div > ul > li > a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-top: 1px solid #111;
+  _text-align: center;
+  font: 11px orbitron;
+  color: #888;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+.navi-list > li > div > ul > li > a:hover {
+  background: #000;
+  color: #fff;
 }
